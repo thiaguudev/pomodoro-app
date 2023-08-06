@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <title>Pomodoro App</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1>Pomodoro Timer</h1>
+          <div class="card-header-buttons">
+            <button
+              id="button-type-pomodoro"
+              class="active"
+              onclick="setPomodoroType(TIMER_TYPE_POMODORO)"
+            >
+              Pomodoro</button
+            ><button
+              id="button-type-short-break"
+              onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK)"
+            >
+              Short a break
+            </button>
+          </div>
+
+          <div class="card-body">
+            <div id="circular-progress-bar" class="progress-bar">
+              <div class="progress-bar-inner">
+                <h2 class="progress-value">25:00</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn-success" onclick="startTimer();">Start</button
+            ><button class="btn-danger" onclick="stopTimer();">Stop</button
+            ><button onclick="resetTimer()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
